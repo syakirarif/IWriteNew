@@ -59,6 +59,7 @@ public class HomeFragment extends Fragment {
 
     public HomeFragment() {
         // Required empty public constructor
+        // Constructor ini dibiarkan kosong
     }
 
     @Override
@@ -67,13 +68,12 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        /** menginisialisasi Progress Bar
-        */
+        // menginisialisasi Progress Bar
+
         progressBar = view.findViewById(R.id.pbHome);
         progressBar.setVisibility(View.VISIBLE);
 
-        /** menginisialisasi Autentifikasi Firebase
-         */
+        // menginisialisasi Autentifikasi Firebase
 
         mAuth = FirebaseAuth.getInstance();
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
@@ -86,10 +86,9 @@ public class HomeFragment extends Fragment {
                     startActivity(loginIntent);
                 } else {
 
-                    mTvNoArticleInHome = (TextView) view.findViewById(R.id.tv_rv_no_home_article);
+                    mTvNoArticleInHome = view.findViewById(R.id.tv_rv_no_home_article);
 
-                    /** Referensi database di Firebase yang akan digunakan
-                     * */
+                    // Referensi database di Firebase yang akan digunakan
 
                     // Referensi FirebaseDatabase untuk mengambil data-data blog
                     mDbRefBlog = FirebaseDatabase.getInstance().getReference().child("blog");
@@ -221,7 +220,7 @@ public class HomeFragment extends Fragment {
 
             mAuth = FirebaseAuth.getInstance();
 
-            optionButton = (ImageButton) mView.findViewById(R.id.imgBtnRowOption);
+            optionButton = mView.findViewById(R.id.imgBtnRowOption);
 
             dbRefUsers = FirebaseDatabase.getInstance().getReference().child("users");
         }
@@ -363,12 +362,11 @@ public class HomeFragment extends Fragment {
                 if (user != null) {
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                    final String userID = mAuth.getCurrentUser().getUid();
 
                     mDbRefUsers.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
-                            if (!dataSnapshot.hasChild(userID)) {
+                            if (!dataSnapshot.hasChild(mAuth.getCurrentUser().getUid())) {
 
                                 Intent loginIntent = new Intent(getActivity(), LoginActivity.class);
                                 startActivity(loginIntent);
