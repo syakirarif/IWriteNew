@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "679836997022",
+    "firebase_url": "https://iwritenew.firebaseio.com",
+    "project_id": "iwritenew",
+    "storage_bucket": "iwritenew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679836997022:android:975ddf3bbf59969e",
+        "android_client_info": {
+          "package_name": "id.amoled.iwritenew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "679836997022-52rqcah06ktjkbkakr36tgcq34j35isu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.amoled.iwritenew",
+            "certificate_hash": "cd5649184fbaf31317aff2f04fc34a34f8ee2693"
+          }
+        },
+        {
+          "client_id": "679836997022-r9nqfklrbftnp9pf2v248rue4qlab0go.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUvjoAwO0zPKUSMRAO2Dky36GVf-8Mbg0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "679836997022-r9nqfklrbftnp9pf2v248rue4qlab0go.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

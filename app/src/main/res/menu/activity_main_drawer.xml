@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Beranda" />
+        <item
+            android:id="@+id/nav_profil"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:title="Profil" />
+        <item
+            android:id="@+id/nav_karyaku"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="Karyaku" />
+        <item
+            android:id="@+id/nav_pencarian"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="Pencarian" />
+        <item
+            android:id="@+id/nav_bookmark"
+            android:icon="@drawable/ic_bookmark_border_black_24dp"
+            android:title="Bookmark" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_info_outline_black_24dp"
+                android:title="About" />
+            <item
+                android:id="@+id/nav_kontak"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Kontak Admin" />
+        </menu>
+    </item>
+
+</menu>
