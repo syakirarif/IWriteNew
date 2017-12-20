@@ -368,6 +368,7 @@ public class HomeFragment extends Fragment {
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             if (!dataSnapshot.hasChild(mAuth.getCurrentUser().getUid())) {
 
+                                // pergi ke LoginActivity
                                 Intent loginIntent = new Intent(getActivity(), LoginActivity.class);
                                 startActivity(loginIntent);
 
